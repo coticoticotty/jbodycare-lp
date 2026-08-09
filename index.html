@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>j body care｜あなたが探しているものは、もうあなたの中にある</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  /* ==========================================================
+     Variables
+  ========================================================== */
+  :root{
+    --color-main: #2e8b57;
+    --color-main-dark: #24734a;
+    --color-main-tint: #eaf3ee;
+    --color-base: #faf8f4;
+    --color-base-soft: #f4f1ea;
+    --color-text: #333333;
+    --color-text-soft: #2c3e50;
+    --color-line: #dedad0;
+    --font-serif: 'Noto Serif JP', serif;
+    --font-sans: 'Noto Sans JP', sans-serif;
+    --space-section: 140px;
+    --space-section-sm: 80px;
+  }
+
+  /* ==========================================================
+     Reset / Base
+  ========================================================== */
+  *{ box-sizing: border-box; margin: 0; padding: 0; }
+  html{ scroll-behavior: smooth; }
+  body{
+    font-family: var(--font-sans);
+    color: var(--color-text);
+    background: var(--color-base);
+    line-height: 2;
+    font-weight: 300;
+    letter-spacing: 0.04em;
+    -webkit-font-smoothing: antialiased;
+  }
+  img{ max-width: 100%; display: block; }
+  a{ color: inherit; text-decoration: none; }
+  ul{ list-style: none; }
+  section{
+    padding: var(--space-section) 24px;
+    position: relative;
+  }
+  .inner{
+    max-width: 880px;
+    margin: 0 auto;
+  }
+  .inner-narrow{
+    max-width: 680px;
+    margin: 0 auto;
+  }
+  h1, h2, h3{
+    font-family: var(--font-serif);
+    color: var(--color-text-soft);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+  }
+  p{
+    margin-bottom: 1.6em;
+  }
+  p:last-child{ margin-bottom: 0; }
+
+  /* ==========================================================
+     Common parts
+  ========================================================== */
+  .eyebrow{
+    display: block;
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    letter-spacing: 0.32em;
+    color: var(--color-main);
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+  .section-title{
+    font-size: 1.9rem;
+    text-align: center;
+    margin-bottom: 60px;
+    line-height: 1.8;
+  }
+  .section-title.small{
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+  }
+  .divider{
+    width: 1px;
+    height: 60px;
+    background: var(--color-main);
+    opacity: 0.4;
+    margin: 0 auto 60px;
+  }
+  .divider-dot{
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--color-main);
+    margin: 60px auto;
+    opacity: 0.6;
+  }
+
+  .btn-reserve{
+    display: inline-block;
+    background: var(--color-main);
+    color: #fff;
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    letter-spacing: 0.2em;
+    padding: 20px 56px;
+    border-radius: 40px;
+    box-shadow: 0 10px 30px rgba(46, 139, 87, 0.25);
+    transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
+  }
+  .btn-reserve:hover{
+    background: var(--color-main-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 14px 34px rgba(46, 139, 87, 0.32);
+  }
+  .btn-wrap{
+    text-align: center;
+    margin-top: 60px;
+  }
+  .btn-note{
+    display: block;
+    margin-top: 18px;
+    font-size: 0.75rem;
+    color: #8a8a8a;
+    letter-spacing: 0.1em;
+  }
+
+  .photo-frame{
+    overflow: hidden;
+    border-radius: 4px;
+  }
+  .photo-frame img{
+    width: 100%;
+    height: auto;
+  }
+
+  /* ==========================================================
+     Header
+  ========================================================== */
+  .site-header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 32px;
+    z-index: 100;
+    background: rgba(250, 248, 244, 0.85);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid rgba(46, 139, 87, 0.08);
+  }
+  .site-header .logo{
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    letter-spacing: 0.18em;
+    color: var(--color-text-soft);
+  }
+  .site-header .header-btn{
+    font-family: var(--font-serif);
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    color: #fff;
+    background: var(--color-main);
+    padding: 10px 24px;
+    border-radius: 30px;
+  }
+
+  /* ==========================================================
+     ① Hero
+  ========================================================== */
+  .hero{
+    padding-top: 180px;
+    padding-bottom: 100px;
+    text-align: center;
+  }
+  .hero .copy{
+    font-family: var(--font-serif);
+    font-size: clamp(1.6rem, 4vw, 2.5rem);
+    line-height: 2.1;
+    color: var(--color-text-soft);
+    margin-bottom: 28px;
+    font-weight: 600;
+  }
+  .hero .copy .accent{
+    color: var(--color-main);
+  }
+  .hero .sub-copy{
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    color: #6b6b6b;
+    margin-bottom: 70px;
+  }
+  .hero .hero-photo{
+    max-width: 760px;
+    margin: 0 auto 70px;
+  }
+
+  /* ==========================================================
+     ② Sympathy list
+  ========================================================== */
+  .sympathy{
+    background: var(--color-base-soft);
+  }
+  .sympathy-list{
+    display: grid;
+    gap: 26px;
+  }
+  .sympathy-list li{
+    position: relative;
+    padding-left: 34px;
+    font-size: 1rem;
+    color: var(--color-text-soft);
+    line-height: 1.9;
+  }
+  .sympathy-list li::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.5em;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 1px solid var(--color-main);
+  }
+
+  /* ==========================================================
+     ③ Philosophy
+  ========================================================== */
+  .philosophy{
+    background: linear-gradient(180deg, var(--color-base) 0%, var(--color-main-tint) 100%);
+  }
+  .philosophy p{
+    font-size: 1rem;
+    color: var(--color-text-soft);
+  }
+  .philosophy .emphasis{
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    text-align: center;
+    color: var(--color-main);
+    margin: 2em 0;
+    letter-spacing: 0.06em;
+    font-weight: 600;
+  }
+  .philosophy .prayer-line{
+    font-family: var(--font-serif);
+    text-align: center;
+    font-size: 1.4rem;
+    color: var(--color-text-soft);
+    margin-top: 2.4em;
+    line-height: 2;
+  }
+  .philosophy .prayer-line .accent{
+    color: var(--color-main);
+    display: block;
+    font-size: 1.1rem;
+    letter-spacing: 0.14em;
+    margin-top: 0.6em;
+  }
+
+  /* ==========================================================
+     ④ Three abilities
+  ========================================================== */
+  .abilities{
+    text-align: center;
+  }
+  .ability-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+  }
+  .ability-item .circle{
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 30px;
+    border: 1px solid var(--color-main);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-serif);
+    font-size: 1.3rem;
+    color: var(--color-main);
+    background: #fff;
+  }
+  .ability-item h3{
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+  }
+  .ability-item p{
+    font-size: 0.92rem;
+    color: #555;
+  }
+
+  /* ==========================================================
+     ⑤ Entrance menu
+  ========================================================== */
+  .entrance{
+    background: var(--color-base-soft);
+  }
+  .entrance-card{
+    background: #fff;
+    border-radius: 6px;
+    padding: 50px;
+    margin-bottom: 36px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.03);
+  }
+  .entrance-card .tag{
+    display: inline-block;
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    color: var(--color-main);
+    border: 1px solid var(--color-main);
+    padding: 5px 14px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+  .entrance-card h3{
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+  }
+  .entrance-card .method{
+    font-size: 0.8rem;
+    color: #8a8a8a;
+    letter-spacing: 0.08em;
+    margin-bottom: 24px;
+    display: block;
+  }
+  .entrance-card p{
+    font-size: 0.94rem;
+  }
+  .entrance-card ul{
+    margin-top: 20px;
+  }
+  .entrance-card ul li{
+    font-size: 0.9rem;
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 8px;
+    color: var(--color-text-soft);
+  }
+  .entrance-card ul li::before{
+    content: "―";
+    position: absolute;
+    left: 0;
+    color: var(--color-main);
+  }
+  .entrance-card.coming-soon{
+    background: transparent;
+    border: 1px dashed var(--color-line);
+    box-shadow: none;
+    text-align: center;
+  }
+  .entrance-card.coming-soon .tag{
+    background: var(--color-main-tint);
+  }
+  .coming-list{
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 18px;
+  }
+  .coming-list span{
+    font-size: 0.85rem;
+    padding: 8px 18px;
+    border: 1px solid var(--color-line);
+    border-radius: 20px;
+    color: #777;
+  }
+  .entrance-note{
+    text-align: center;
+    font-family: var(--font-serif);
+    color: var(--color-main);
+    font-size: 1rem;
+    margin-top: 50px;
+    letter-spacing: 0.05em;
+  }
+
+  /* ==========================================================
+     ⑥ Pricing
+  ========================================================== */
+  .pricing-group{
+    margin-bottom: 90px;
+  }
+  .pricing-group:last-child{ margin-bottom: 0; }
+  .pricing-group > .group-label{
+    text-align: center;
+    font-size: 0.78rem;
+    letter-spacing: 0.24em;
+    color: var(--color-main);
+    margin-bottom: 14px;
+  }
+  .pricing-group > h3.group-title{
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+  .pricing-group > p.group-desc{
+    font-size: 0.94rem;
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 50px;
+    color: var(--color-text-soft);
+  }
+
+  .menu-item{
+    border-top: 1px solid var(--color-line);
+    padding: 44px 0;
+  }
+  .menu-item:last-child{
+    border-bottom: 1px solid var(--color-line);
+  }
+  .menu-item h4{
+    font-family: var(--font-serif);
+    font-size: 1.15rem;
+    color: var(--color-text-soft);
+    margin-bottom: 18px;
+  }
+  .menu-item p{
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+  .price-table{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  .price-col .price-col-label{
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    color: var(--color-main);
+    margin-bottom: 14px;
+    display: block;
+    font-weight: 500;
+  }
+  .price-line{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 10px 0;
+    border-bottom: 1px dotted var(--color-line);
+    font-size: 0.9rem;
+  }
+  .price-line .price{
+    font-family: var(--font-serif);
+    color: var(--color-text-soft);
+    font-weight: 600;
+    white-space: nowrap;
+    padding-left: 12px;
+  }
+  .menu-meta{
+    margin-top: 22px;
+    font-size: 0.8rem;
+    color: #888;
+  }
+
+  .simple-menu-item .price-line{
+    font-size: 1rem;
+  }
+
+  /* ==========================================================
+     ⑦ Voice
+  ========================================================== */
+  .voice{
+    background: var(--color-base-soft);
+  }
+  .voice-quote{
+    font-family: var(--font-serif);
+    text-align: center;
+    font-size: 1.35rem;
+    color: var(--color-main);
+    margin-bottom: 50px;
+    line-height: 1.9;
+  }
+  .voice-body p{
+    font-size: 0.94rem;
+  }
+  .voice-recommend{
+    margin-top: 60px;
+    padding: 40px;
+    background: #fff;
+    border-radius: 6px;
+  }
+  .voice-recommend h4{
+    font-family: var(--font-serif);
+    color: var(--color-main);
+    font-size: 1rem;
+    margin-bottom: 18px;
+    letter-spacing: 0.08em;
+  }
+  .voice-recommend p{
+    font-size: 0.9rem;
+    margin-bottom: 0;
+  }
+  .voice-sub{
+    margin-top: 90px;
+    text-align: center;
+    border-top: 1px solid var(--color-line);
+    padding-top: 60px;
+  }
+  .voice-sub h3{
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  .voice-sub p{
+    font-size: 0.9rem;
+    color: #888;
+  }
+
+  /* ==========================================================
+     ⑧ Profile
+  ========================================================== */
+  .profile-top{
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 90px;
+  }
+  .profile-top .photo-frame{
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+  }
+  .profile-name{
+    font-size: 1.6rem;
+    margin-bottom: 14px;
+  }
+  .profile-role{
+    font-size: 0.9rem;
+    color: var(--color-main);
+    letter-spacing: 0.08em;
+  }
+  .profile-block{
+    margin-bottom: 70px;
+  }
+  .profile-block:last-child{ margin-bottom: 0; }
+  .profile-block h3{
+    font-size: 1.2rem;
+    margin-bottom: 26px;
+    position: relative;
+    padding-left: 20px;
+  }
+  .profile-block h3::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.3em;
+    width: 4px;
+    height: 1.1em;
+    background: var(--color-main);
+  }
+  .profile-block p{
+    font-size: 0.94rem;
+  }
+
+  /* ==========================================================
+     ⑨ FAQ
+  ========================================================== */
+  .faq-item{
+    border-bottom: 1px solid var(--color-line);
+  }
+  .faq-item summary{
+    list-style: none;
+    cursor: pointer;
+    padding: 30px 40px 30px 0;
+    font-family: var(--font-serif);
+    font-size: 1.02rem;
+    color: var(--color-text-soft);
+    position: relative;
+    font-weight: 600;
+  }
+  .faq-item summary::-webkit-details-marker{ display:none; }
+  .faq-item summary::before{
+    content: "Q";
+    color: var(--color-main);
+    font-family: var(--font-serif);
+    margin-right: 16px;
+    font-weight: 700;
+  }
+  .faq-item summary::after{
+    content: "+";
+    position: absolute;
+    right: 6px;
+    top: 28px;
+    font-size: 1.4rem;
+    color: var(--color-main);
+    transition: transform 0.3s ease;
+    font-weight: 300;
+  }
+  .faq-item[open] summary::after{
+    transform: rotate(45deg);
+  }
+  .faq-item .faq-answer{
+    padding: 0 0 34px 34px;
+    font-size: 0.92rem;
+    color: #555;
+  }
+  .faq-item .faq-answer p{ margin-bottom: 1.2em; }
+  .faq-item .faq-answer p:last-child{ margin-bottom: 0; }
+
+  /* ==========================================================
+     ⑩ Reservation & Access
+  ========================================================== */
+  .reservation-access{
+    background: var(--color-main);
+    color: #fff;
+  }
+  .reservation-access h2,
+  .reservation-access .eyebrow{
+    color: #fff;
+  }
+  .ra-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    margin-top: 60px;
+  }
+  .ra-block h3{
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 24px;
+    letter-spacing: 0.1em;
+  }
+  .ra-block p{
+    font-size: 0.92rem;
+    opacity: 0.92;
+  }
+  .reservation-access .btn-reserve{
+    background: #fff;
+    color: var(--color-main);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  }
+  .reservation-access .btn-reserve:hover{
+    background: var(--color-base);
+  }
+  .reservation-access .btn-note{
+    color: rgba(255,255,255,0.75);
+  }
+  .ra-station{
+    display: inline-block;
+    margin-top: 14px;
+    padding: 8px 20px;
+    border: 1px solid rgba(255,255,255,0.5);
+    border-radius: 20px;
+    font-size: 0.85rem;
+  }
+
+  /* ==========================================================
+     ⑪ Final message
+  ========================================================== */
+  .final-message{
+    text-align: center;
+    padding-top: 180px;
+    padding-bottom: 180px;
+  }
+  .final-message p{
+    font-size: 1rem;
+    color: var(--color-text-soft);
+    margin-bottom: 1.4em;
+  }
+  .final-message .life-force{
+    color: var(--color-main);
+    font-family: var(--font-serif);
+    font-weight: 600;
+  }
+  .final-message .closing{
+    margin-top: 120px;
+    font-family: var(--font-serif);
+    font-size: clamp(1.5rem, 4vw, 2.1rem);
+    color: var(--color-main);
+    letter-spacing: 0.1em;
+    font-weight: 600;
+  }
+
+  /* ==========================================================
+     Footer
+  ========================================================== */
+  .site-footer{
+    text-align: center;
+    padding: 50px 24px;
+    font-size: 0.75rem;
+    color: #999;
+    letter-spacing: 0.08em;
+  }
+
+  /* ==========================================================
+     Responsive
+  ========================================================== */
+  @media (max-width: 860px){
+    .profile-top{
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+    .profile-top .photo-frame{
+      width: 200px;
+      margin: 0 auto;
+    }
+    .ra-grid{
+      grid-template-columns: 1fr;
+      gap: 50px;
+    }
+  }
+
+  @media (max-width: 768px){
+    :root{
+      --space-section: 90px;
+    }
+    section{ padding: var(--space-section) 20px; }
+    .site-header{ padding: 16px 20px; }
+    .hero{ padding-top: 140px; }
+    .section-title{ font-size: 1.5rem; margin-bottom: 44px; }
+    .ability-grid{
+      grid-template-columns: 1fr;
+      gap: 60px;
+    }
+    .price-table{
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    .entrance-card{ padding: 34px 26px; }
+    .profile-block h3{ font-size: 1.1rem; }
+  }
+
+  @media (max-width: 480px){
+    .hero .copy{ font-size: 1.4rem; }
+    .btn-reserve{ padding: 18px 40px; font-size: 0.92rem; }
+    .philosophy .prayer-line{ font-size: 1.15rem; }
+    .final-message .closing{ font-size: 1.4rem; }
+  }
+</style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="logo">j body care</div>
+    <a href="#reservation" class="header-btn">ご予約はこちら</a>
+  </header>
+
+  <!-- ① ファーストビュー -->
+  <section class="hero">
+    <div class="inner">
+      <p class="copy">
+        あなたが探しているものは、<br>
+        もう、<span class="accent">あなたの中にある</span>。
+      </p>
+      <p class="sub-copy">身体は、それを知っています。</p>
+
+      <div class="hero-photo photo-frame">
+        <img src="https://placehold.co/1200x750/f4f6f4/2e8b57?text=Photo" alt="j body care イメージ写真">
+      </div>
+
+      <div class="btn-wrap">
+        <a href="#reservation" class="btn-reserve">ご予約はこちら</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ② このようなことを感じていませんか？ -->
+  <section class="sympathy">
+    <div class="inner-narrow">
+      <span class="eyebrow">FEELING</span>
+      <h2 class="section-title">このようなことを<br class="sp-only">感じていませんか？</h2>
+      <ul class="sympathy-list">
+        <li>忙しい毎日に追われ、自分の身体を労わる余裕がない</li>
+        <li>身体の不調が続くと、気持ちまで落ち込んでしまう</li>
+        <li>休みの日は寝てばかり。何もせずに過ごしてしまう</li>
+        <li>身体が重く、なかなかやる気が出ない</li>
+        <li>そこそこうまくいっているはずなのに、時々すごく不安になる</li>
+        <li>不調になるたびに「どうしたら治るんだろう」と答えを探してしまう</li>
+        <li>自分が本当はどうしたいのか、わからなくなることがある</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ③ j body careが大切にしていること -->
+  <section class="philosophy">
+    <div class="inner-narrow">
+      <span class="eyebrow">OUR BELIEF</span>
+      <h2 class="section-title">j body careが<br class="sp-only">大切にしていること</h2>
+
+      <p class="emphasis">「自分の身体のことは、身体に聴けばわかる」</p>
+
+      <p>
+        j body careが大切にしているのは、この感覚です。
+      </p>
+      <p>
+        身体を無理に変えようとしたり、コントロールしたりするのではなく、<br>
+        また、身体に振り回されるのでもなく、<br>
+        今ここにある身体とつながっていくこと。
+      </p>
+      <p>
+        身体はいつも、その時の最善を生きています。<br>
+        だからこそ、体調に浮き沈みがあるのも自然なこと。
+      </p>
+      <p>
+        不調や痛みも、ただ取り除く対象としてではなく、<br>
+        身体からの大切なメッセージとして丁寧に感じていくことを大切にしています。
+      </p>
+      <p>
+        触れること、感じることを通して、<br>
+        エネルギー、水分、血液が巡り、<br>
+        本来備わっている循環や力が思い出されていく。
+      </p>
+      <p>
+        そして、既に自分の中に在るものに気づいていく。
+      </p>
+      <p>
+        j body careでの時間は、<br>
+        その体験を分かち合い、響き合うための時間です。
+      </p>
+
+      <p class="prayer-line">
+        それは、
+        <span class="accent">“あるがままに、いのちを生きる”<br>私の祈りでもあります。</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- ④ 私ができること -->
+  <section class="abilities">
+    <div class="inner">
+      <span class="eyebrow">WHAT I DO</span>
+      <h2 class="section-title">私ができること</h2>
+      <div class="ability-grid">
+        <div class="ability-item">
+          <div class="circle">ゆるめる</div>
+          <h3>ゆるめる</h3>
+          <p>かたく強ばった筋肉を、施術でゆるめる。</p>
+        </div>
+        <div class="ability-item">
+          <div class="circle">流す</div>
+          <h3>流す</h3>
+          <p>身体の滞りを見つけ、流れを促す。</p>
+        </div>
+        <div class="ability-item">
+          <div class="circle">受け取る</div>
+          <h3>受け取る</h3>
+          <p>身体からのメッセージを受け取る。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑤ あなたに合う入口 -->
+  <section class="entrance">
+    <div class="inner">
+      <span class="eyebrow">ENTRANCE</span>
+      <h2 class="section-title">あなたに合う入口</h2>
+
+      <div class="entrance-card">
+        <span class="tag">BODY WORK</span>
+        <h3>レギュラーボディワーク｜対面</h3>
+        <span class="method">対面</span>
+        <p>
+          定期的に身体と向き合いながら、身体をゆるめ、巡りを促していくボディワーク。
+        </p>
+        <ul>
+          <li>オイルトリートメント</li>
+          <li>よもぎ蒸し＋オイルトリートメント</li>
+        </ul>
+      </div>
+
+      <div class="entrance-card">
+        <span class="tag">BODY WORK SESSION</span>
+        <h3>ボディワークセッション｜対面</h3>
+        <span class="method">対面</span>
+        <p>
+          身体に触れることと、対話すること。<br>
+          よもぎ蒸し・オイルトリートメント・対話を通して、今、身体にあるものを丁寧に感じ、受け取っていくセッションです。
+        </p>
+      </div>
+
+      <div class="entrance-card">
+        <span class="tag">REMOTE BODY WORK SESSION</span>
+        <h3>リモートボディワークセッション｜Zoom</h3>
+        <span class="method">Zoom</span>
+        <p>
+          Zoomでの対話を通して、ご自身の身体を感じるところから始めます。<br>
+          身体からの声を共に受け取りながら、内側にあるものに気づいていくセッションです。
+        </p>
+      </div>
+
+      <div class="entrance-card coming-soon">
+        <span class="tag">COMING SOON…</span>
+        <h3>今後、内容が整い次第追加</h3>
+        <div class="coming-list">
+          <span>人生劇場</span>
+          <span>各種講座</span>
+          <span>OKURU</span>
+          <span>同業者コミュニティ</span>
+        </div>
+      </div>
+
+      <p class="entrance-note">「入り口は違っても、向かう先は自分自身」</p>
+    </div>
+  </section>
+
+  <!-- ⑥ メニュー・料金 -->
+  <section class="menu-pricing">
+    <div class="inner">
+      <span class="eyebrow">MENU &amp; PRICE</span>
+      <h2 class="section-title">メニュー・料金</h2>
+
+      <!-- 対面｜レギュラーボディワーク -->
+      <div class="pricing-group">
+        <span class="group-label">対面｜レギュラーボディワーク</span>
+        <h3 class="group-title">Regular Body Work</h3>
+        <p class="group-desc">
+          定期的かつ継続的に身体と向き合うことで、より深く「本来の状態」に還っていくためのメニューです。<br>
+          その時々の身体の状態に寄り添いながら、無理なく、しかし確実に整えていくことを大切にしています。
+        </p>
+
+        <div class="menu-item">
+          <h4>① オイルトリートメント</h4>
+          <p>
+            アロマオイルを用いたトリートメントです。<br>
+            筋肉の状態に合わせた圧で、ゆっくりと深部までゆるめ、血流や老廃物の流れを促し、身体本来の循環を取り戻していきます。
+          </p>
+          <div class="price-table">
+            <div class="price-col">
+              <span class="price-col-label">女性</span>
+              <div class="price-line"><span>90分</span><span class="price">15,000円／回</span></div>
+              <div class="price-line"><span>90分　3回券</span><span class="price">40,000円</span></div>
+              <div class="price-line"><span>120分</span><span class="price">18,000円／回</span></div>
+              <div class="price-line"><span>120分　3回券</span><span class="price">45,000円</span></div>
+            </div>
+            <div class="price-col">
+              <span class="price-col-label">男性</span>
+              <div class="price-line"><span>90分</span><span class="price">18,000円</span></div>
+              <div class="price-line"><span>120分</span><span class="price">23,000円</span></div>
+            </div>
+          </div>
+          <p class="menu-meta">所要時間：2〜3時間程度　※時間に余裕をもってお越しください。</p>
+        </div>
+
+        <div class="menu-item">
+          <h4>② よもぎ蒸し＋オイルトリートメント</h4>
+          <p>
+            韓方理論に基づき、専門家によって丁寧にブレンドされたハーブを、本場韓国より取り寄せています。<br>
+            よもぎ蒸しで身体の内側から温め巡りを促した後、オイルトリートメントを行うことで、相乗的に深い緩みとデトックスを促していきます。
+          </p>
+          <div class="price-table">
+            <div class="price-col">
+              <span class="price-col-label">女性</span>
+              <div class="price-line"><span>よもぎ蒸し＋オイル90分</span><span class="price">25,000円／回</span></div>
+              <div class="price-line"><span>90分　3回券</span><span class="price">69,000円</span></div>
+              <div class="price-line"><span>よもぎ蒸し＋オイル120分</span><span class="price">28,000円／回</span></div>
+              <div class="price-line"><span>120分　3回券</span><span class="price">75,000円</span></div>
+            </div>
+            <div class="price-col">
+              <span class="price-col-label">男性</span>
+              <div class="price-line"><span>よもぎ蒸し＋オイル90分</span><span class="price">28,000円</span></div>
+            </div>
+          </div>
+          <p class="menu-meta">所要時間：3時間程度　※時間に余裕をもってお越しください。</p>
+        </div>
+      </div>
+
+      <!-- 対面｜ボディワークセッション -->
+      <div class="pricing-group">
+        <span class="group-label">対面｜ボディワークセッション</span>
+        <h3 class="group-title">Body Work Session</h3>
+        <p class="group-desc">
+          身体に触れることと、対話すること。その両方を通して、今、身体にあるものを丁寧に感じ、受け取っていくセッションです。<br>
+          その日の状態に合わせて内容を構成します。
+        </p>
+        <div class="menu-item simple-menu-item">
+          <h4>内容</h4>
+          <ul style="margin-bottom:24px;">
+            <li style="font-size:0.9rem; padding-left:20px; position:relative; margin-bottom:8px; color:var(--color-text-soft);">よもぎ蒸し</li>
+            <li style="font-size:0.9rem; padding-left:20px; position:relative; margin-bottom:8px; color:var(--color-text-soft);">オイルトリートメント</li>
+            <li style="font-size:0.9rem; padding-left:20px; position:relative; margin-bottom:8px; color:var(--color-text-soft);">対話（傾聴セッション）</li>
+          </ul>
+          <div class="price-line"><span>時間</span><span class="price">5〜6時間</span></div>
+          <div class="price-line"><span>料金</span><span class="price">40,000円</span></div>
+          <p class="menu-meta">
+            Zoomによる事前・事後セッションあり。ご予約日とは別に、それぞれ30分〜1時間程度の事前セッションと事後セッションを行います。日程は個別にご相談。
+          </p>
+        </div>
+      </div>
+
+      <!-- リモート｜ボディワークセッション -->
+      <div class="pricing-group">
+        <span class="group-label">リモート｜ボディワークセッション</span>
+        <h3 class="group-title">Remote Body Work Session</h3>
+        <p class="group-desc">
+          Zoomでの対話を通して、ご自身の身体を感じる感覚や、身体からの声を共に受け取っていくセッションです。
+        </p>
+        <div class="menu-item simple-menu-item">
+          <div class="price-line"><span>全3回</span><span class="price">45,000円</span></div>
+        </div>
+      </div>
+
+      <div class="btn-wrap">
+        <a href="#reservation" class="btn-reserve">ご予約はこちら</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑦ お客様の声 -->
+  <section class="voice">
+    <div class="inner-narrow">
+      <span class="eyebrow">VOICE</span>
+      <h2 class="section-title">お客様の声</h2>
+      <p style="text-align:center; font-size:0.85rem; color:#888; margin-top:-40px; margin-bottom:50px;">対面ボディワークを受けて</p>
+
+      <p class="voice-quote">「自分には、本当は感じたかったことがあったんだ」</p>
+
+      <div class="voice-body">
+        <p>受ける前は、日常がとにかく忙しく、やらなければいけないことに追われている感覚がありました。</p>
+        <p>慢性的に疲れが溜まっていて、自分の身体に意識を向ける余裕もあまりありませんでした。</p>
+        <p>施術を受けながら、話を聞いてもらったり、身体の声にも耳を傾けてもらったりしました。</p>
+        <p>その中で気づいたのは、「自分には本当は感じたかったことがあったんだ」ということです。</p>
+        <p>その感覚をただ自分に感じさせてあげることで、内側にあった固いものが少しずつ溶けていくような感じがありました。</p>
+        <p>それと同時に、体全体が安心感に満ちていき、心が軽くなるような不思議な感覚がありました。</p>
+        <p>私は足に慢性的な痛みがあるのですが、ある時じゅれいさんに、「足も身体の一部で、全部つながっていることを思い出してね」と言われたことが印象に残っています。</p>
+        <p>それまで私は、頭の中の忙しさに気を取られて、自分の大切な身体の一部である足に意識を向ける余裕がありませんでした。</p>
+        <p>でも、その言葉をきっかけに、自分の足のことをちゃんと感じてあげる大切さに気づきました。</p>
+        <p>今でも時々、じゅれいさんに「足のことを思い出してくださいね」と言われます。</p>
+        <p>そうやって足に意識を向けるだけで、頭の忙しさから少し離れ、身体を休める時間を取れるようになりました。</p>
+      </div>
+
+      <div class="voice-recommend">
+        <h4>こんな方におすすめしたい</h4>
+        <p>日々やることに追われて、自分の身体の声を後回しにしてしまっている人におすすめしたいです。</p>
+        <p>慢性的な疲れや痛みがある人、頭では頑張っているけれど、心や身体が置いてきぼりになっているように感じる人にも合っていると思います。</p>
+        <p>自分の身体にやさしく意識を向けたい人や、安心して自分の内側を感じる時間を持ちたい人に、ぜひ受けてみてほしいです。</p>
+      </div>
+
+      <div class="voice-sub">
+        <h3>リモートボディワークセッションの<br class="sp-only">お客様の声</h3>
+        <p>モニター終了者のアンケート回答が届き次第、追加予定です。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑧ プロフィール -->
+  <section class="profile">
+    <div class="inner">
+      <span class="eyebrow">PROFILE</span>
+      <h2 class="section-title">プロフィール</h2>
+
+      <div class="profile-top">
+        <div class="photo-frame">
+          <img src="https://placehold.co/600x600/f4f6f4/2e8b57?text=Photo" alt="上間 寿玲 プロフィール写真">
+        </div>
+        <div>
+          <p class="profile-name">上間 寿玲（じょうま じゅれい）</p>
+          <p class="profile-role">ボディワーカー／j body care主宰</p>
+        </div>
+      </div>
+
+      <div class="profile-block">
+        <h3>この仕事を始めたきっかけ</h3>
+        <p>40歳になった頃、兄をがんで亡くしました。</p>
+        <p>その当時、私自身もとても体調が悪く、あらゆる不定愁訴を体験していました。</p>
+        <p>鬱で半年以上仕事を休み、自宅療養していたこともあります。</p>
+        <p>兄が亡くなったことで死生観が大きく変わり、「健康ってなんだ？」「生きるってどういうこと？」という問いに憑りつかれるようになりました。</p>
+        <p>さまざまなことを学び、体験していく中で、それを職業とするようになります。</p>
+        <p>肩こり専門店で経験を積み、2018年、京都・烏丸で独立。</p>
+        <p>2025年、京都市左京区へ自宅兼サロンを移転しました。</p>
+      </div>
+
+      <div class="profile-block">
+        <h3>身体に触れる中で気づいたこと</h3>
+        <p>多くの方の身体に触れる中で、身体には、その方の多くの記憶が宿っていることを感じました。</p>
+        <p>その方が気づいている・いないに関わらず、身体は日常の中で多くのことを感じ、気づき、それが感じられるまで大切に抱えている。</p>
+        <p>私は、その声を受け取り始めました。</p>
+        <p>時には、ご本人が言っていることとは真逆のメッセージを身体から受け取ることもありました。</p>
+        <p>身体から伝わってくる悲痛な声に、涙を堪えられない体験もあります。</p>
+        <p>そして私は、身体から受け取ったその声を、その身体の持ち主に伝えずにはいられませんでした。</p>
+      </div>
+
+      <div class="profile-block">
+        <h3>今、届けたいこと</h3>
+        <p>身体と心はつながっている。このことは、多くの方が体験を通して知っていることです。</p>
+        <p>だからこそ身体に不具合があると、それをどうにかしようと考える。身体をコントロールする対象としてしまう。</p>
+        <p>でも、その痛みは、その不具合は、もしかしたら身体からのメッセージかもしれない。</p>
+        <p>ただ見つめる。耳を傾ける。触れる。</p>
+        <p>そうすることで、感じ、受け取れるものがあるかもしれない。</p>
+        <p>そんな体験を共にできたら。それが私の歓びであり、祈りです。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑨ よくある質問 -->
+  <section class="faq">
+    <div class="inner-narrow">
+      <span class="eyebrow">FAQ</span>
+      <h2 class="section-title">よくある質問</h2>
+
+      <details class="faq-item" open>
+        <summary>初めてでも大丈夫ですか？</summary>
+        <div class="faq-answer">
+          <p>はい。</p>
+          <p>ボディワークにしても、リモートセッションにしても、身体と心のとてもパーソナルな部分に深く触れることのある時間です。</p>
+          <p>だからこそ、一つひとつ丁寧に、大切に触れながら、安心してその時間を過ごしていただけるよう努めています。</p>
+          <p>無理に何かを話したり、感じたりする必要もありません。私はいつでも伴走者として、共に居ます。</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>どのメニューを選べばいいですか？</summary>
+        <div class="faq-answer">
+          <p>メニューをご覧になり、負担に感じない範囲で、ピンときたものをお選びください。</p>
+          <p>入り口はどれでも、必ずあなたにつながります。</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>男性も受けられますか？</summary>
+        <div class="faq-answer">
+          <p>もちろんお受けいただけます。</p>
+          <p>リモートボディワークセッションは男女共通料金です。対面ボディワークのみ男性料金を設定しています。詳しくはメニュー・料金をご覧ください。</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>リモートでは、身体に触れないのに何をするのですか？</summary>
+        <div class="faq-answer">
+          <p>決まったプログラムに沿って進めるセッションではありません。</p>
+          <p>まずは「今考えていること」「不快に感じていること」「身体の不調」など、その時の状態をお話しいただくところから始めます。</p>
+          <p>そこから対話をしながら、身体を感じていただいたり、身体へのアプローチをお伝えしたり、実際に立ったり歩いたりしていただくこともあります。</p>
+          <p>身体の使い方や、その時に感じ取ったことをフィードバックしながら対話を重ねていくと、少しずつ言葉が出てきたり、ご自身の中で気づきが起こったりすることがあります。</p>
+          <p>実際に「身体が緩んだ」「力を抜くことができた」と感じられる方もいらっしゃいます。</p>
+          <p>その時、その人の身体にあるものを一緒に感じ、受け取っていく。そんな時間です。</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- ⑩ ご予約・アクセス -->
+  <section class="reservation-access" id="reservation">
+    <div class="inner">
+      <span class="eyebrow">RESERVATION &amp; ACCESS</span>
+      <h2 class="section-title">ご予約・アクセス</h2>
+
+      <div class="ra-grid">
+        <div class="ra-block">
+          <h3>ご予約</h3>
+          <p>ご予約はGoogleフォームより承っております。<br>下記ボタンよりお進みください。</p>
+        </div>
+        <div class="ra-block">
+          <h3>アクセス</h3>
+          <p>京都市左京区<br>最寄り駅・バス停「二軒茶屋」</p>
+          <p>詳しい住所は、ご予約確定後にお知らせします。</p>
+        </div>
+      </div>
+
+      <div class="btn-wrap">
+        <!-- ご予約はこちら：Googleフォームへのリンクに差し替えてください -->
+        <a href="#" class="btn-reserve">ご予約はこちら</a>
+        <span class="btn-note">Googleフォームへ移動します</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑪ 最後のメッセージ -->
+  <section class="final-message">
+    <div class="inner-narrow">
+      <p>私は、あなたを変えることはできません。</p>
+      <p>
+        私はただ、<br>
+        あなたの中にすでにある<br>
+        <span class="life-force">「いのちを生きる力」</span>を<br>
+        信頼しています。
+      </p>
+
+      <p class="closing">j body careは、私の祈りです。</p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    &copy; j body care
+  </footer>
+
+</body>
+</html>
